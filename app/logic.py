@@ -1,4 +1,6 @@
 from app.models import Candidate, Role, MatchResult
+from app.ml_model import model
+
 
 
 def match_candidate_to_role(candidate: Candidate, role: Role) -> MatchResult:
@@ -23,3 +25,4 @@ def match_candidate_to_role(candidate: Candidate, role: Role) -> MatchResult:
         score=final_score,
         explanation=explanation
     )
+
